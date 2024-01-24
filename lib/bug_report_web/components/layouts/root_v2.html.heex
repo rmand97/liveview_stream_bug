@@ -1,0 +1,14 @@
+<div class="flex flex-col items-center justify-center">
+  <div class="flex flex-row gap-3">
+    <.link class="border rounded bg-blue-700 w-fit px-2 text-white" navigate={~p"/"}>
+      Page one
+    </.link>
+    <.link class="border rounded bg-blue-700 w-fit px-2 text-white" navigate={~p"/two"}>
+      Page two
+    </.link>
+  </div>
+
+  <%= @inner_content %>
+
+  <%= live_render(@socket, BugReportWeb.Live.Content, id: "test", sticky: true) %>
+</div>

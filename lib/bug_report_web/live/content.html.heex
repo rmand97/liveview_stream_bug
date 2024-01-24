@@ -1,0 +1,6 @@
+<div class="p-2 border">
+  <h1 class="bold pb-5 text-2xl">This is the sticky liveview</h1>
+  <div id="items" class="flex flex-col gap-3" phx-update="stream">
+    <span :for={{dom_id, item} <- @streams.items} id={dom_id}><%= item.name %></span>
+  </div>
+</div>
